@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bolinas Capital</title>
+  <meta name="description" content="Bolinas Capital is a private family office.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Bolinas Capital">
+  <meta property="og:description" content="A private family office.">
+  <meta property="og:url" content="https://bolinas.se">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --ink: #1d2a2f;
+      --muted: #6b7376;
+      --line: #c9c2b6;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12191c;
+        --ink: #ece7df;
+        --muted: #9aa2a4;
+        --line: #3a4448;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-weight: 300;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 0 24px;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      animation: fade 1.6s ease-out both;
+    }
+    .mark { width: 56px; height: 56px; margin-bottom: 36px; color: var(--ink); }
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 7vw, 4.4rem);
+      letter-spacing: 0.04em;
+      line-height: 1.05;
+    }
+    .rule { width: 48px; height: 1px; background: var(--line); margin: 32px auto; }
+    p.tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    footer {
+      padding: 32px 0;
+      text-align: center;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+    @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) { main { animation: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+      <circle cx="32" cy="32" r="30"/>
+      <path d="M10 40 C 20 34, 26 34, 32 40 S 44 46, 54 40"/>
+      <path d="M14 47 C 22 42, 27 42, 32 47 S 42 52, 50 47"/>
+      <circle cx="32" cy="24" r="6"/>
+    </svg>
+    <h1>Bolinas Capital</h1>
+    <div class="rule"></div>
+    <p class="tagline">Family Office</p>
+  </main>
+  <footer>&copy; <span id="y">2026</span> Bolinas Capital</footer>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>
